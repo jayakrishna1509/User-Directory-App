@@ -1,0 +1,279 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #667eea;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  color: #2757F5;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 300;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.search-count {
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #667eea;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+/* Error/Success Messages */
+.error-message {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  animation: slideDown 0.3s ease;
+}
+
+.error-message.error {
+  background: #ffebee;
+  color: #c62828;
+  border-left: 4px solid #c62828;
+}
+
+.error-message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #2e7d32;
+}
+
+/* Load More Section */
+.load-more-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.loading-text {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.load-more-btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
+}
+
+.load-more-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.load-more-btn:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.load-more-btn.loading {
+  opacity: 0.8;
+}
+
+.load-more-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #000;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+  color: #000;
+  font-size: 0.9rem;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .search-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .search-count {
+    width: 100%;
+    text-align: center;
+  }
+
+  .load-more-btn {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px;
+    min-height: calc(100vh - 20px);
+  }
+
+  .app-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .search-section {
+    gap: 8px;
+  }
+
+  .search-input {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .search-count {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .error-message {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  .load-more-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    gap: 10px;
+  }
+
+  .loading-text {
+    font-size: 0.9rem;
+  }
+
+  .load-more-btn {
+    min-width: unset;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .app-footer {
+    padding-top: 20px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small (320px and below) */
+@media (max-width: 360px) {
+  .app-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+
+  .load-more-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

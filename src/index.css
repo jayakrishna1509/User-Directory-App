@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px 10px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #667eea;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #764ba2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+input {
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+/* Desktop (Large screens) */
+@media (max-width: 1024px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+
+  body {
+    padding: 15px 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  :root {
+    font-size: 13px;
+  }
+
+  body {
+    padding: 10px 5px;
+  }
+}
