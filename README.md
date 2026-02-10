@@ -1,6 +1,6 @@
 # 📋DAY 5 TASK: "User Directory" App — API Fetching & UI Updates
 
-## 🎯Objective:
+## 🎯Objective
 Build a User Directory app in React that demonstrates:
 
 • **Axios** (HTTP requests)
@@ -67,7 +67,7 @@ npm run dev              # Start development server
 
 • Add a **search input** to filter users by name or email.
 
-## 🖼 UI Layout Sketch:
+## 🖼 UI Layout Sketch
 ```
 📚 User Directory App
 
