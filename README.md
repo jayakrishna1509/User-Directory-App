@@ -106,8 +106,8 @@ npm run dev              # Start development server
 ```
 
 ## ✅Summary Table
-**Topic**  **Applied In**
+**Topic** - **Applied In**
 
-**fetch** Initial API call (first 5 users)
+**fetch** - Initial API call (first 5 users)
 
-**Axios** "Load More" fetch (next 5 users)
+**Axios** - "Load More" fetch (next 5 users)
